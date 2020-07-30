@@ -8,7 +8,6 @@
 # libs
 library(data.table)
 library(dplyr)
-library(curl)
 library(usethis)
 library(stringr)
 
@@ -192,14 +191,14 @@ panel_sites <- sites_DT[, .(site = unique(site))]
 # export ----
 # as .rds to 'global' folder in 'data/sample'
 dir.create(file.path("./data/global"), showWarnings = F)
-saveRDS(sites_DT, file = "./data/global/global_sites_DT.rds", compress = F)
+saveRDS(sites_DT, file = "./data/global/sites_DT.rds", compress = F)
 
 # check
 list.files("./data/sample/global")
 
 # test loading: correct
 rm(list = ls())
-sites_DT <- readRDS("./data/global/global_sites_DT.rds")
+sites_DT <- readRDS("./data/global/sites_DT.rds")
 sites_DT
 glimpse(sites_DT)
 summary(sites_DT)
