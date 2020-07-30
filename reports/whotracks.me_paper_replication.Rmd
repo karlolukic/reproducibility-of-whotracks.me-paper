@@ -21,9 +21,9 @@ text-align: justify}
 
 ```{r, include=T}
 # libs
+library(magrittr)
 library(data.table)
 library(ggplot2)
-library(magrittr)
 ```
 
 # Info
