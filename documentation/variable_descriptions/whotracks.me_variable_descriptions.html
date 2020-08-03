@@ -9,8 +9,9 @@
 <meta http-equiv="X-UA-Compatible" content="IE=EDGE" />
 
 
-<meta name="author" content="Karlo Lukic, karlo.lukic@pm.me" />
+<meta name="author" content="Karlo Lukic, lukic@wiwi.uni-frankfurt.de" />
 
+<meta name="date" content="2020-08-03" />
 
 <title>WhoTracks.me Dataset - Variable Descriptions</title>
 
@@ -376,8 +377,8 @@ summary {
 
 
 <h1 class="title toc-ignore">WhoTracks.me Dataset - Variable Descriptions</h1>
-<h4 class="author">Karlo Lukic, <a href="mailto:karlo.lukic@pm.me" class="email">karlo.lukic@pm.me</a></h4>
-<h4 class="date">01.05.20</h4>
+<h4 class="author">Karlo Lukic, <a href="mailto:lukic@wiwi.uni-frankfurt.de" class="email">lukic@wiwi.uni-frankfurt.de</a></h4>
+<h4 class="date">2020-08-03</h4>
 
 </div>
 
@@ -543,19 +544,6 @@ summary {
 <li><p><code>referer_leaked_url</code> - unexplained (no best guess). todo: double-check this</p></li>
 <li><p><code>cookie_samesite_none</code> - unexplained (no best guess). todo: double-check this</p></li>
 <li><p><code>t_active</code> - unexplained (no best guess). todo: double-check this</p></li>
-</ul>
-<div style="page-break-after: always;"></div>
-<p><strong>Added variables</strong></p>
-<p>These are the variables I added for the DID analysis project:</p>
-<ul>
-<li><p><code>category_fg</code> - one of 55 website categories provided by <a href="https://bit.ly/36qWJl2">Fortiguard’s Web Filter</a>.</p></li>
-<li><p><code>ipv4</code> - first IPv4 address of a site (server’s IP address), derived from NSLookup via R package <a href="https://bit.ly/2VMo4td">curl</a></p></li>
-<li><p><code>server_continent_name</code> - continent of IPv4 (server’s geolocation) according to latest edition of <a href="https://t.ly/to8l">DB-IP “IP to City Lite” MMDB database</a>. Categorical string.</p></li>
-<li><p><code>server_country_name</code> - country of IPv4 (server’s geolocation) according to latest edition of <a href="https://t.ly/to8l">DB-IP “IP to City Lite” MMDB database</a>. Categorical string.</p></li>
-<li><p><code>server_country_code</code> - country code of IPv4 (server’s geolocation) according to latest edition of <a href="https://t.ly/to8l">DB-IP “IP to City Lite” MMDB database</a>. Categorical string.</p></li>
-<li><p><code>is_treated</code> - indicator variable specifying if the site is subjected to GDPR regulation (<code>1</code>) or not subjected to GDRP regulation (<code>0</code>) according to defined control/treatment framework. For main sample, includes 28 EU member states, 3 EEA regions and 9 outermost regions, similar to <a href="https://bit.ly/2yuhiAs">this encoding</a> but excluding Montenegro (according to <a href="https://bit.ly/2VyZpIg">Article 3.3.</a>). Boolean integer.</p></li>
-<li><p><code>time</code> - indicator variable specifying pre- (<code>0</code>) and post-GDPR (<code>1</code>) periods. Boolean integer.</p></li>
-<li><p><code>duplicate_site</code> - indicator variable specifying if the website in the sample has 1 (<code>0</code>) or 2 (<code>1</code>) observations: i.e. website with 2 observations was visited by both EU and US users, while website with 1 observation was visited either by US or EU users. Boolean integer.</p></li>
 </ul>
 </div>
 

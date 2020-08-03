@@ -37,7 +37,7 @@
 \IfFileExists{bookmark.sty}{\usepackage{bookmark}}{\usepackage{hyperref}}
 \hypersetup{
   pdftitle={WhoTracks.me Dataset - Variable Descriptions},
-  pdfauthor={Karlo Lukic, karlo.lukic@pm.me},
+  pdfauthor={Karlo Lukic, lukic@wiwi.uni-frankfurt.de},
   hidelinks,
   pdfcreator={LaTeX via pandoc}}
 \urlstyle{same} % disable monospaced font for URLs
@@ -62,8 +62,8 @@
 
 \title{WhoTracks.me Dataset - Variable Descriptions}
 \author{Karlo Lukic,
-\href{mailto:karlo.lukic@pm.me}{\nolinkurl{karlo.lukic@pm.me}}}
-\date{01.05.20}
+\href{mailto:lukic@wiwi.uni-frankfurt.de}{\nolinkurl{lukic@wiwi.uni-frankfurt.de}}}
+\date{2020-08-03}
 
 \begin{document}
 \maketitle
@@ -530,55 +530,6 @@ page from which a link to the currently requested page was followed.''
 \item
   \texttt{t\_active} - unexplained (no best guess). todo: double-check
   this
-\end{itemize}
-
-\newpage
-
-\textbf{Added variables}
-
-These are the variables I added for the DID analysis project:
-
-\begin{itemize}
-\item
-  \texttt{category\_fg} - one of 55 website categories provided by
-  \href{https://bit.ly/36qWJl2}{Fortiguard's Web Filter}.
-\item
-  \texttt{ipv4} - first IPv4 address of a site (server's IP address),
-  derived from NSLookup via R package
-  \href{https://bit.ly/2VMo4td}{curl}
-\item
-  \texttt{server\_continent\_name} - continent of IPv4 (server's
-  geolocation) according to latest edition of
-  \href{https://t.ly/to8l}{DB-IP ``IP to City Lite'' MMDB database}.
-  Categorical string.
-\item
-  \texttt{server\_country\_name} - country of IPv4 (server's
-  geolocation) according to latest edition of
-  \href{https://t.ly/to8l}{DB-IP ``IP to City Lite'' MMDB database}.
-  Categorical string.
-\item
-  \texttt{server\_country\_code} - country code of IPv4 (server's
-  geolocation) according to latest edition of
-  \href{https://t.ly/to8l}{DB-IP ``IP to City Lite'' MMDB database}.
-  Categorical string.
-\item
-  \texttt{is\_treated} - indicator variable specifying if the site is
-  subjected to GDPR regulation (\texttt{1}) or not subjected to GDRP
-  regulation (\texttt{0}) according to defined control/treatment
-  framework. For main sample, includes 28 EU member states, 3 EEA
-  regions and 9 outermost regions, similar to
-  \href{https://bit.ly/2yuhiAs}{this encoding} but excluding Montenegro
-  (according to \href{https://bit.ly/2VyZpIg}{Article 3.3.}). Boolean
-  integer.
-\item
-  \texttt{time} - indicator variable specifying pre- (\texttt{0}) and
-  post-GDPR (\texttt{1}) periods. Boolean integer.
-\item
-  \texttt{duplicate\_site} - indicator variable specifying if the
-  website in the sample has 1 (\texttt{0}) or 2 (\texttt{1})
-  observations: i.e.~website with 2 observations was visited by both EU
-  and US users, while website with 1 observation was visited either by
-  US or EU users. Boolean integer.
 \end{itemize}
 
 \end{document}

@@ -1,7 +1,7 @@
 ---
 title: "WhoTracks.me - Study Replication"
-author: 'Karlo Lukic, karlo.lukic@pm.me'
-date: "01.05.20"
+author: 'Karlo Lukic, lukic@wiwi.uni-frankfurt.de'
+date: "2020-08-03"
 output:
   html_document: 
     code_folding: hide

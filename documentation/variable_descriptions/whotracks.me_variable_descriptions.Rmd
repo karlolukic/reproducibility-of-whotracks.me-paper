@@ -1,7 +1,7 @@
 ---
 title: "WhoTracks.me Dataset - Variable Descriptions"
-author: "Karlo Lukic, karlo.lukic@pm.me"
-date: "01.05.20"
+author: "Karlo Lukic, lukic@wiwi.uni-frankfurt.de"
+date: "2020-08-03"
 output:
   html_document: default
   pdf_document: default
@@ -177,26 +177,3 @@ Differences between `reach` and `site_reach` (according to above blog post):
  * `cookie_samesite_none` - unexplained (no best guess). todo: double-check this
  
  * `t_active` - unexplained (no best guess). todo: double-check this
- 
-\newpage 
-
-**Added variables**
- 
-These are the variables I added for the DID analysis project:
-
-* `category_fg` - one of 55 website categories provided by [Fortiguard's Web Filter](https://bit.ly/36qWJl2). 
- 
- * `ipv4` - first IPv4 address of a site (server's IP address), derived from NSLookup via R package [curl](https://bit.ly/2VMo4td)
- 
- * `server_continent_name` - continent of IPv4 (server's geolocation) according to latest edition of [DB-IP "IP to City Lite" MMDB database](https://t.ly/to8l). Categorical string.
- 
- * `server_country_name` - country of IPv4 (server's geolocation) according to latest edition of [DB-IP "IP to City Lite" MMDB database](https://t.ly/to8l). Categorical string.
- 
- * `server_country_code` - country code of IPv4 (server's geolocation) according to latest edition of [DB-IP "IP to City Lite" MMDB database](https://t.ly/to8l). Categorical string.
- 
- * `is_treated` - indicator variable specifying if the site is subjected to GDPR regulation (`1`) or not subjected to GDRP regulation (`0`) according to defined control/treatment framework. For main sample, includes 28 EU member states, 3 EEA regions and 9 outermost regions, similar to [this encoding](https://bit.ly/2yuhiAs) but excluding Montenegro (according to [Article 3.3.](https://bit.ly/2VyZpIg)). Boolean integer.
- 
- * `time` - indicator variable specifying pre- (`0`) and post-GDPR (`1`) periods. Boolean integer.
- 
- * `duplicate_site` - indicator variable specifying if the website in the sample has 1 (`0`) or 2 (`1`) observations: i.e. website with 2 observations was visited by both EU and US users, while website with 1 observation was visited either by US or EU users. Boolean integer.
-
