@@ -60,8 +60,6 @@ All 5 above datasets share similar aggregated variables. The difference therefor
  
 > "We define tracking as when a service is able to collect and correlate data across multiple sites."
  
-\newpage
- 
 **Secure context** – tracker used HTTPS requests -- instead of HTTP -- to load its content:
 
  * `https` - proportion of pages where the tracker only used `HTTPS` traffic. Float between 0 and 1.
@@ -86,8 +84,6 @@ All 5 above datasets share similar aggregated variables. The difference therefor
  
 > "These signals [`requests_failed` and `has_blocking`] should be able to tell us something about the impact of blocking on different trackers in the ecosystem. For example, we see evidence of blocking 40% of the time for Google Analytics and Facebook [in Dec 2017], and between 10% and 20% of requests failing. Thus, anyone using these services to measure activity and conversions on their sites must reckon with error rates in these orders. We also can see how new entrants can initially avoid the effects of blocking - for Tru Optik and Digitrust who we mentioned earlier, we measure only 5 and 1% of pages which may be affected by blocking."
  
-\newpage 
-
 **Tracker's content loading context** – proportion of page loads where specific resource types were loaded by the tracker (e.g. scripts, iframes, plugins)
 
 Signals for the frequency with which certain resource types are loaded by third-parties (measures [added](https://t.ly/NQcD) in Feb 2018):
