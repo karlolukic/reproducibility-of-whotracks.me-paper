@@ -150,16 +150,14 @@ Differences between `reach` and `site_reach` (according to above blog post):
  * Low reach and high site reach - Only appearing rarely on many sites, e.g. only on a small number of pages for each site; In this category appear extensions that operate as "man in the middle", such as Kaspersky Labs.
  * Low reach and low site reach - Present on few lower-traffic sites. This includes smaller trackers.
 
-**Additional measures without explanation** (todo: contact Sam)
+**Latest measures added**:
+
+ * `referer_leaked_header` -  the full site url was sent to a tracker via the `Referer` HTTP header.
  
- * `referer_leaked` - unexplained (my best guess: proportion of total page loads in which the HTTP referer header was transmitted to a tracker). Float between 0 and 1. todo: double-check this
+ * `referer_leaked_url` - the full site url was sent to a tracker via URL parameters.
  
-> "The Referer request header contains the address of the previous web page from which a link to the currently requested page was followed."
+ * `referer_leaked` - one (or both) of the above happened.
  
- * `referer_leaked_header` - unexplained (my best guess: proportion of total page loads in which the HTTP referer header was transmitted to a tracker while including full URL of the previously visited web page). Float between 0 and 1. todo: double-check this
+ * `cookie_samesite_none` - See this [documentation](https://mzl.la/2FptFRy). Sending the cookie attribute `SameSite: None` is a way of explicitly stating that the server wants to receive cookies from multiple different sites (i.e. that this cookie will be used for cross-site tracking).
  
- * `referer_leaked_url` - unexplained (no best guess). todo: double-check this
- 
- * `cookie_samesite_none` - unexplained (no best guess). todo: double-check this
- 
- * `t_active` - unexplained (no best guess). todo: double-check this
+ * `t_active` - this is a measure of time active on the site (with the tab open and focused).

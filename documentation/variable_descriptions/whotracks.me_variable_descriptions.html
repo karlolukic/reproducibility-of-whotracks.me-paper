@@ -9,11 +9,9 @@
 <meta http-equiv="X-UA-Compatible" content="IE=EDGE" />
 
 
-<meta name="author" content="Karlo Lukic, lukic@wiwi.uni-frankfurt.de" />
 
-<meta name="date" content="2020-08-03" />
 
-<title>WhoTracks.me Dataset - Variable Descriptions</title>
+<title>whotracks.me_variable_descriptions.utf8</title>
 
 <script>// Pandoc 2.9 adds attributes on both header and div. We remove the former (to
 // be compatible with the behavior of Pandoc < 2.8).
@@ -376,14 +374,20 @@ summary {
 
 
 
-<h1 class="title toc-ignore">WhoTracks.me Dataset - Variable Descriptions</h1>
-<h4 class="author">Karlo Lukic, <a href="mailto:lukic@wiwi.uni-frankfurt.de" class="email">lukic@wiwi.uni-frankfurt.de</a></h4>
-<h4 class="date">2020-08-03</h4>
 
 </div>
 
 
+<div id="whotracks.me-dataset---variable-descriptions" class="section level1">
+<h1>WhoTracks.me Dataset - Variable Descriptions</h1>
+</div>
+<div id="author-karlo-lukic-lukicwiwi.uni-frankfurt.de" class="section level1">
+<h1>author: Karlo Lukic, <a href="mailto:lukic@wiwi.uni-frankfurt.de" class="email">lukic@wiwi.uni-frankfurt.de</a></h1>
+</div>
+<div id="date-2020-08-03" class="section level1">
+<h1>date: 2020-08-03</h1>
 <p>This document represents a summary of WhoTracks.me data compiled from paper readings, blog posts and official GitHub’s variable descriptions.</p>
+</div>
 <div id="data-collection" class="section level1">
 <h1>Data collection</h1>
 <p>Data was collected from May 2017 from users that used Cliqz browser extension. In Feb 2018, 70% of the data came from German users according to <a href="https://t.ly/NQcD">this</a> blog post. Then in March 2018, users of Ghostry FireFox extension – and Ghostry extension available for other browsers (Safari, Chrome, Opera and Edge) from users that opted-in to <em>HumanWeb</em> data collection – were added to the dataset. This caused a slight decrease in the avg. no. of trackers in April 2018, since Ghostry users were blocking more trackers. This is explained in <a href="https://bit.ly/2VIBndZ">this</a> and <a href="https://t.ly/BoCm">this</a> blog posts.</p>
@@ -435,7 +439,6 @@ summary {
 <blockquote>
 <p>“We define tracking as when a service is able to collect and correlate data across multiple sites.”</p>
 </blockquote>
-<div style="page-break-after: always;"></div>
 <p><strong>Secure context</strong> – tracker used HTTPS requests – instead of HTTP – to load its content:</p>
 <ul>
 <li><code>https</code> - proportion of pages where the tracker only used <code>HTTPS</code> traffic. Float between 0 and 1.</li>
@@ -460,7 +463,6 @@ summary {
 <blockquote>
 <p>“These signals [<code>requests_failed</code> and <code>has_blocking</code>] should be able to tell us something about the impact of blocking on different trackers in the ecosystem. For example, we see evidence of blocking 40% of the time for Google Analytics and Facebook [in Dec 2017], and between 10% and 20% of requests failing. Thus, anyone using these services to measure activity and conversions on their sites must reckon with error rates in these orders. We also can see how new entrants can initially avoid the effects of blocking - for Tru Optik and Digitrust who we mentioned earlier, we measure only 5 and 1% of pages which may be affected by blocking.”</p>
 </blockquote>
-<div style="page-break-after: always;"></div>
 <p><strong>Tracker’s content loading context</strong> – proportion of page loads where specific resource types were loaded by the tracker (e.g. scripts, iframes, plugins)</p>
 <p>Signals for the frequency with which certain resource types are loaded by third-parties (measures <a href="https://t.ly/NQcD">added</a> in Feb 2018):</p>
 <ul>
@@ -532,18 +534,13 @@ summary {
 <li>Low reach and high site reach - Only appearing rarely on many sites, e.g. only on a small number of pages for each site; In this category appear extensions that operate as “man in the middle”, such as Kaspersky Labs.</li>
 <li>Low reach and low site reach - Present on few lower-traffic sites. This includes smaller trackers.</li>
 </ul>
-<p><strong>Additional measures without explanation</strong> (todo: contact Sam)</p>
+<p><strong>Latest measures added</strong>:</p>
 <ul>
-<li><code>referer_leaked</code> - unexplained (my best guess: proportion of total page loads in which the HTTP referer header was transmitted to a tracker). Float between 0 and 1. todo: double-check this</li>
-</ul>
-<blockquote>
-<p>“The Referer request header contains the address of the previous web page from which a link to the currently requested page was followed.”</p>
-</blockquote>
-<ul>
-<li><p><code>referer_leaked_header</code> - unexplained (my best guess: proportion of total page loads in which the HTTP referer header was transmitted to a tracker while including full URL of the previously visited web page). Float between 0 and 1. todo: double-check this</p></li>
-<li><p><code>referer_leaked_url</code> - unexplained (no best guess). todo: double-check this</p></li>
-<li><p><code>cookie_samesite_none</code> - unexplained (no best guess). todo: double-check this</p></li>
-<li><p><code>t_active</code> - unexplained (no best guess). todo: double-check this</p></li>
+<li><p><code>referer_leaked_header</code> - the full site url was sent to a tracker via the ‘Referer’ HTTP header.</p></li>
+<li><p><code>referer_leaked_url</code> - the full site url was sent to a tracker via URL parameters.</p></li>
+<li><p><code>referer_leaked</code> - one (or both) of the above happened.</p></li>
+<li><p><code>cookie_samesite_none</code> - See this <a href="https://mzl.la/2FptFRy">documentation</a>. Sending the cookie attribute <code>SameSite: None</code> is a way of explicitly stating that the server wants to receive cookies from multiple different sites (i.e. that this cookie will be used for cross-site tracking).</p></li>
+<li><p><code>t_active</code> - this is a measure of time active on the site (with the tab open and focused).</p></li>
 </ul>
 </div>
 
