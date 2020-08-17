@@ -1,6 +1,6 @@
 # WhoTracks.me Dataset - Variable Descriptions
 # author: Karlo Lukic, lukic@wiwi.uni-frankfurt.de
-# date: 2020-08-03
+# date: 2020-08-17
 
 This document represents a summary of WhoTracks.me data compiled from paper readings, blog posts and official GitHub's variable descriptions.
 
