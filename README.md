@@ -1,7 +1,8 @@
-# WhoTracks.me: Shedding light on the opaque world of online tracking
+# Reproducibility of the Paper "WhoTracks.me: Shedding Light on the Opaque World of Online Tracking"
 
-This repo contains R code to reproduce 90% of [Results section from WhoTracks.me 2018 paper](https://t.ly/rKI5).
-It also contains updated variable descriptions on WhoTracks.me datasets.
+This repository contains the R code needed to reproduce approximately 90% of the Results section from the paper ["WhoTracks.me: Shedding Light on the Opaque World of Online Tracking"](https://arxiv.org/abs/1804.08959).
 
-Files that contain reproduction of the analysis are within `./reports` both as RMarkdown (raw version with R code) and HTML (exported version).
-Updated variable descriptions are within `./documentation`.
+It also includes updated variable descriptions for the WhoTracks.me data sets.
+
+- Files that reproduce the analysis are located in the `./reports` directory, available in both R Markdown (raw version with R code) and HTML (exported version).
+- Updated variable descriptions can be found in the `./documentation` directory.
